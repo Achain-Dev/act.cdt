@@ -87,6 +87,31 @@ extern "C" {
    __attribute__((eosio_wasm_import))
    uint32_t get_blockchain_parameters_packed( char* data, uint32_t datalen );
 
+   //add for achain2.0
+   /*
+    * set block producers' num
+    */
+   __attribute__((eosio_wasm_import))
+   bool set_proposed_schedule_size( uint32_t size );
+   
+   /*
+    * get the num of bps
+    */
+   __attribute__((eosio_wasm_import))
+   uint32_t get_proposed_schedule_size();
+   
+   /*
+    * check if a chain func open ?
+    */
+   __attribute__((eosio_wasm_import))
+   bool is_chain_func_open(capi_name  func_typ);
+   
+   /*
+    * get a value of chain config
+    */
+   __attribute__((eosio_wasm_import))
+   int64_t get_chain_config_value(capi_name func_typ);
+
 #ifdef __cplusplus
 }
 #endif
