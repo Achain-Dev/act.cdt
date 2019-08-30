@@ -38,7 +38,7 @@ std::unique_ptr<LexerSource> LexerSourceFile::Clone() {
     result.reset();
   }
 
-  return result;
+  return std::move(result);
 }
 
 Result LexerSourceFile::Tell(Offset* out_offset) {
