@@ -18,14 +18,14 @@ if [ -d "/usr/local/eosio.cdt" ]; then
       case $yn in
          [Yy]* )
             pushd /usr/local &> /dev/null
-            rm -rf eosio.cdt
+            rm -rf act.cdt
             pushd bin &> /dev/null
             for binary in ${binaries[@]}; do
                rm ${binary}
             done
             popd &> /dev/null
             pushd lib/cmake &> /dev/null
-            rm -rf eosio.cdt
+            rm -rf act.cdt
             popd &> /dev/null
             break;;
          [Nn]* ) 

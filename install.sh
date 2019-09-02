@@ -40,7 +40,7 @@
    BUILD_DIR="${PWD}/build"
    CMAKE_BUILD_TYPE=Release
    TIME_BEGIN=$( date -u +%s )
-   INSTALL_PREFIX="/usr/local/eosio.cdt"
+   INSTALL_PREFIX="/usr/local/act.cdt"
    VERSION=1.2
 
    txtbld=$(tput bold)
@@ -56,7 +56,7 @@
       exit 1;
    fi
    if ! make install; then
-      printf "\\n\\t>>>>>>>>>>>>>>>>>>>> MAKE installing EOSIO has exited with the above error.\\n\\n"
+      printf "\\n\\t>>>>>>>>>>>>>>>>>>>> MAKE installing Achain has exited with the above error.\\n\\n"
       exit -1
    fi
    popd &> /dev/null 

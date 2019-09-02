@@ -15,8 +15,8 @@ endif()
 
 
 set(VERSION_MAJOR 1)
-set(VERSION_MINOR 6)
-set(VERSION_PATCH 2)
+set(VERSION_MINOR 0)
+set(VERSION_PATCH 0)
 #set(VERSION_SUFFIX rc2)
 
 if (VERSION_SUFFIX)
@@ -36,22 +36,22 @@ set(WASM_SDK_BUILD true)
 
 ### Configure the EosioWasmToolchain.cmakes
 set(CDT_ROOT_DIR ${CMAKE_BINARY_DIR})
-configure_file(${CMAKE_SOURCE_DIR}/modules/eosio.cdt-config.cmake ${CMAKE_BINARY_DIR}/lib/cmake/eosio.cdt/eosio.cdt-config.cmake @ONLY)
-configure_file(${CMAKE_SOURCE_DIR}/modules/EosioCDTMacros.cmake.in ${CMAKE_BINARY_DIR}/lib/cmake/eosio.cdt/EosioCDTMacros.cmake @ONLY)
-configure_file(${CMAKE_SOURCE_DIR}/modules/EosioWasmToolchain.cmake.in ${CMAKE_BINARY_DIR}/lib/cmake/eosio.cdt/EosioWasmToolchain.cmake @ONLY)
+configure_file(${CMAKE_SOURCE_DIR}/modules/act.cdt-config.cmake ${CMAKE_BINARY_DIR}/lib/cmake/act.cdt/act.cdt-config.cmake @ONLY)
+configure_file(${CMAKE_SOURCE_DIR}/modules/ActCDTMacros.cmake.in ${CMAKE_BINARY_DIR}/lib/cmake/act.cdt/ActCDTMacros.cmake @ONLY)
+configure_file(${CMAKE_SOURCE_DIR}/modules/ActWasmToolchain.cmake.in ${CMAKE_BINARY_DIR}/lib/cmake/act.cdt/ActWasmToolchain.cmake @ONLY)
 
 set(CDT_ROOT_DIR ${CDT_INSTALL_PREFIX})
-configure_file(${CMAKE_SOURCE_DIR}/modules/eosio.cdt-config.cmake ${CMAKE_BINARY_DIR}/modules/eosio.cdt-config.cmake @ONLY)
-install(FILES ${CMAKE_BINARY_DIR}/modules/eosio.cdt-config.cmake DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/eosio.cdt)
-configure_file(${CMAKE_SOURCE_DIR}/modules/EosioCDTMacros.cmake.in ${CMAKE_BINARY_DIR}/modules/EosioCDTMacros.cmake @ONLY)
-configure_file(${CMAKE_SOURCE_DIR}/modules/EosioWasmToolchain.cmake.in ${CMAKE_BINARY_DIR}/modules/EosioWasmToolchain.cmake @ONLY)
-install(FILES ${CMAKE_BINARY_DIR}/modules/EosioWasmToolchain.cmake DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/eosio.cdt)
-install(FILES ${CMAKE_BINARY_DIR}/modules/EosioCDTMacros.cmake DESTINATION ${CDT_INSTALL_PREFIX}/lib/cmake/eosio.cdt)
+configure_file(${CMAKE_SOURCE_DIR}/modules/act.cdt-config.cmake ${CMAKE_BINARY_DIR}/modules/act.cdt-config.cmake @ONLY)
+install(FILES ${CMAKE_BINARY_DIR}/modules/act.cdt-config.cmake DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/act.cdt)
+configure_file(${CMAKE_SOURCE_DIR}/modules/ActCDTMacros.cmake.in ${CMAKE_BINARY_DIR}/modules/ActCDTMacros.cmake @ONLY)
+configure_file(${CMAKE_SOURCE_DIR}/modules/ActWasmToolchain.cmake.in ${CMAKE_BINARY_DIR}/modules/ActWasmToolchain.cmake @ONLY)
+install(FILES ${CMAKE_BINARY_DIR}/modules/ActWasmToolchain.cmake DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/act.cdt)
+install(FILES ${CMAKE_BINARY_DIR}/modules/ActCDTMacros.cmake DESTINATION ${CDT_INSTALL_PREFIX}/lib/cmake/act.cdt)
 
 set(CDT_ROOT_DIR "_PREFIX_")
-configure_file(${CMAKE_SOURCE_DIR}/modules/EosioCDTMacros.cmake.in ${CMAKE_BINARY_DIR}/modules/EosioCDTMacrosPackage.cmake @ONLY)
-configure_file(${CMAKE_SOURCE_DIR}/modules/EosioWasmToolchain.cmake.in ${CMAKE_BINARY_DIR}/modules/EosioWasmToolchainPackage.cmake @ONLY)
-configure_file(${CMAKE_SOURCE_DIR}/modules/eosio.cdt-config.cmake ${CMAKE_BINARY_DIR}/modules/eosio.cdt-config.cmake.package @ONLY)
+configure_file(${CMAKE_SOURCE_DIR}/modules/ActCDTMacros.cmake.in ${CMAKE_BINARY_DIR}/modules/ActCDTMacrosPackage.cmake @ONLY)
+configure_file(${CMAKE_SOURCE_DIR}/modules/ActWasmToolchain.cmake.in ${CMAKE_BINARY_DIR}/modules/ActWasmToolchainPackage.cmake @ONLY)
+configure_file(${CMAKE_SOURCE_DIR}/modules/act.cdt-config.cmake ${CMAKE_BINARY_DIR}/modules/act.cdt-config.cmake.package @ONLY)
 
 include(modules/LibrariesExternalProject.txt)
 
@@ -79,7 +79,7 @@ configure_file(${CMAKE_SOURCE_DIR}/eosio_llvm/LICENSE.TXT ${CMAKE_BINARY_DIR}/li
 configure_file(${CMAKE_SOURCE_DIR}/libraries/boost/boost.license ${CMAKE_BINARY_DIR}/licenses/boost.license COPYONLY)
 configure_file(${CMAKE_SOURCE_DIR}/tools/external/wabt/LICENSE ${CMAKE_BINARY_DIR}/licenses/wabt.license COPYONLY)
 configure_file(${CMAKE_SOURCE_DIR}/tools/jsoncons/LICENSE ${CMAKE_BINARY_DIR}/licenses/jsoncons.license COPYONLY)
-configure_file(${CMAKE_SOURCE_DIR}/LICENSE ${CMAKE_BINARY_DIR}/licenses/eosio.cdt.license COPYONLY)
+configure_file(${CMAKE_SOURCE_DIR}/LICENSE ${CMAKE_BINARY_DIR}/licenses/act.cdt.license COPYONLY)
 
 include(modules/TestsExternalProject.txt)
 
