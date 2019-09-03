@@ -17,7 +17,7 @@ ExternalProject_Add(
 
 
 if (EOSIO_RUN_INTEGRATION_TESTS)
-   find_package(eosio)
+   find_package(achain)
 
    if (eosio_FOUND)
       if(CMAKE_BUILD_TYPE STREQUAL "Debug")
