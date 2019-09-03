@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(act_cdt)
+project(act.cdt)
 
 find_program(SCCACHE_FOUND sccache)
 if (SCCACHE_FOUND)

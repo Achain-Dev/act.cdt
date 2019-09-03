@@ -28,6 +28,19 @@ namespace eosio {
 
         __attribute((eosio_wasm_import))
         int64_t set_proposed_producers( char*, uint32_t );
+        
+        //add for achain2.0
+        __attribute__((eosio_wasm_import))
+        bool set_proposed_schedule_size( uint32_t size );
+
+        __attribute__((eosio_wasm_import))
+        uint32_t get_proposed_schedule_size();
+
+        __attribute__((eosio_wasm_import))
+        bool is_chain_func_open(uint64_t func_typ);
+
+        __attribute__((eosio_wasm_import))
+        int64_t get_chain_config_value(uint64_t func_typ);
       }
    }
 
@@ -234,5 +247,20 @@ namespace eosio {
    inline void set_privileged( name account, bool is_priv ) {
       internal_use_do_not_use::set_privileged( account.value, is_priv );
    }
+   
+   inline bool set_proposed_schedule_size( uint32_t size ){
+      return internal_use_do_not_use::set_proposed_schedule_size(size);
+   }
+   
+   inline int32_t get_proposed_schedule_size(){
+      return internal_use_do_not_use::get_proposed_schedule_size();
+   }
 
+   inline bool is_chain_func_open(name  func_typ) {
+      return internal_use_do_not_use::is_chain_func_open(func_typ.value);
+   }
+   
+   inline int64_t get_chain_config_value(name func_typ){
+      return internal_use_do_not_use::get_chain_config_value(func_typ.value);
+   }
 }

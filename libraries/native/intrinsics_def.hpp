@@ -154,7 +154,12 @@ intrinsic_macro(send_inline) \
 intrinsic_macro(send_context_free_inline) \
 intrinsic_macro(send_deferred) \
 intrinsic_macro(cancel_deferred) \
-intrinsic_macro(get_context_free_data) 
+intrinsic_macro(get_context_free_data) \
+intrinsic_macro(set_proposed_schedule_size) \
+intrinsic_macro(get_proposed_schedule_size) \
+intrinsic_macro(is_chain_func_open) \
+intrinsic_macro(get_chain_config_value)
+ 
 
 #define CREATE_ENUM(name) \
    name,
