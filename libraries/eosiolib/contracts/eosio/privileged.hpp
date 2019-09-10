@@ -256,7 +256,7 @@ namespace eosio {
       return internal_use_do_not_use::get_proposed_schedule_size();
    }
 
-   inline bool is_chain_func_open(name  func_typ) {
+   inline bool is_chain_func_open(name func_typ) {
       return internal_use_do_not_use::is_chain_func_open(func_typ.value);
    }
    

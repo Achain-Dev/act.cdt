@@ -39,7 +39,7 @@ extern "C" {
       return intrinsics::get().call<intrinsics::get_proposed_schedule_size>();
    }
 
-   bool is_chain_func_open(capi_name  func_typ){
+   bool is_chain_func_open(capi_name func_typ){
       return intrinsics::get().call<intrinsics::is_chain_func_open>(func_typ);
    }
 

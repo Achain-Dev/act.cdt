@@ -104,7 +104,7 @@ extern "C" {
     * check if a chain func open
     */
    __attribute__((eosio_wasm_import))
-   bool is_chain_func_open(capi_name  func_typ);
+   bool is_chain_func_open(capi_name func_typ);
    
    /*
     * get a value of chain config

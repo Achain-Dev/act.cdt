@@ -92,7 +92,7 @@ __attribute__((eosio_wasm_import))
 uint32_t get_proposed_schedule_size();
 
 __attribute__((eosio_wasm_import))
-bool is_chain_func_open(capi_name  func_typ);
+bool is_chain_func_open(capi_name func_typ);
 
 __attribute__((eosio_wasm_import))
 int64_t get_chain_config_value(capi_name func_typ);
