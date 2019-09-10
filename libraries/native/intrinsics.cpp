@@ -31,6 +31,21 @@ extern "C" {
    void set_blockchain_parameters_packed( char* data, uint32_t datalen ) {
       return intrinsics::get().call<intrinsics::set_blockchain_parameters_packed>(data, datalen);
    }
+   bool set_proposed_schedule_size( uint32_t size ){
+      return intrinsics::get().call<intrinsics::set_proposed_schedule_size>(size);
+   }
+   
+   uint32_t get_proposed_schedule_size(){
+      return intrinsics::get().call<intrinsics::get_proposed_schedule_size>();
+   }
+
+   bool is_chain_func_open(capi_name  func_typ){
+      return intrinsics::get().call<intrinsics::is_chain_func_open>(func_typ);
+   }
+
+   int64_t get_chain_config_value(capi_name func_typ){
+      return intrinsics::get().call<intrinsics::get_chain_config_value>(func_typ);
+   }
    bool is_privileged( capi_name account ) {
       return intrinsics::get().call<intrinsics::is_privileged>(account);
    }

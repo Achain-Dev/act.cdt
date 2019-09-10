@@ -73,5 +73,4 @@
    printf "\t    \\  \\::/       \\  \\::/        /__/:/        \\__\\/      \\  \\::/ \n"
    printf "\t     \\__\\/         \\__\\/         \\__\\/                     \\__\\/ \n${txtrst}"
 
-   printf "\\tFor more information:\\n"
-   printf "\\tEOSIO website: https://eos.io\\n"
+   printf "\\t\\n"

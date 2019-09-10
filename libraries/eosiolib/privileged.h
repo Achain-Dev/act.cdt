@@ -101,7 +101,7 @@ extern "C" {
    uint32_t get_proposed_schedule_size();
    
    /*
-    * check if a chain func open ?
+    * check if a chain func open
     */
    __attribute__((eosio_wasm_import))
    bool is_chain_func_open(capi_name  func_typ);

@@ -26,7 +26,7 @@ namespace eosio {
         __attribute__((eosio_wasm_import))
         uint32_t get_blockchain_parameters_packed( char* data, uint32_t datalen );
 
-        __attribute((eosio_wasm_import))
+        __attribute__((eosio_wasm_import))
         int64_t set_proposed_producers( char*, uint32_t );
         
         //add for achain2.0
