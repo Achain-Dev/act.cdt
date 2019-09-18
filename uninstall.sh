@@ -41,7 +41,7 @@ if [ -d "/usr/local/act.wasmsdk" ]; then
       case $yn in
          [Yy]* )
             pushd /usr/local &> /dev/null
-            rm -rf eosio.wasmsdk
+            rm -rf act.wasmsdk
             pushd bin &> /dev/null
             for binary in ${binaries[@]}; do
                rm ${binary}
