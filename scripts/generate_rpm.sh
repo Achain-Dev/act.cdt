@@ -20,6 +20,9 @@ export SSUBPREFIX
 
 bash generate_tarball.sh ${NAME}.tar.gz
 
+mkdir -p ~/rpmbuild/BUILDROOT
+mkdir -p ~/rpmbuild/BUILD
+
 RPMBUILD=`realpath ~/rpmbuild/BUILDROOT/${NAME}.x86_64`
 mkdir -p ${RPMBUILD} 
 FILES=$(tar -xvzf ${NAME}.tar.gz -C ${RPMBUILD})
