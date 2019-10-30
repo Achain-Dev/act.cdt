@@ -4,7 +4,7 @@
 ACT.CDT is a toolchain for WebAssembly (WASM) and set of tools to facilitate contract writing for the Achain platform.  In addition to being a general purpose WebAssembly toolchain, [Achain](https://github.com/Achain-Dev/Achain2.0.git) specific optimizations are available to support building Achain smart contracts.  This new toolchain is built around [Clang 7](https://github.com/eosio/llvm), which means that act.CDT has the most currently available optimizations and analyses from LLVM, but as the WASM target is still considered experimental, some optimizations are not available or incomplete.
 
 ### Binary Releases
-ACT.CDT currently supports Linux x86_64 RPM packages.
+ACT.CDT currently supports Linux x86_64 RPM / Debian packages.
 #### Centos RPM Package Install
 ```sh
 $ wget https://github.com/Achain-Dev/act.cdt/releases/download/v1.0.0/act.cdt-1.0.0-1.x86_64.rpm
@@ -15,6 +15,18 @@ $ sudo yum install ./act.cdt-1.0.0-1.x86_64.rpm
 ```sh
 $ sudo yum remove act.cdt
 ```
+
+#### Debian Package Install
+```sh
+$ wget https://github.com/Achain-Dev/act.cdt/releases/download/v1.0.0/act.cdt_1.0.0-1_amd64.deb
+$ sudo apt install ./act.cdt_1.0.0-1_amd64.deb
+```
+
+#### Debian Package Uninstall
+```sh
+$ sudo apt remove act.cdt
+```
+
 
 ### Guided Installation (Building from Scratch)
 ```sh
